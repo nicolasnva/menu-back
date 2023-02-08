@@ -11,28 +11,6 @@ const corsOptions = {
     optionsSuccessStatus: 200,
 };
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    apiKey: "AIzaSyAiVfMg9rVfLsaWYA0HRpIX_QuN_VbNjuE",
-    authDomain: "menu-selection.firebaseapp.com",
-    projectId: "menu-selection",
-    storageBucket: "menu-selection.appspot.com",
-    messagingSenderId: "132272318374",
-    appId: "1:132272318374:web:5a0c8a369470b6bc1c9167",
-    measurementId: "G-4B1KLRGS56"
-};
-
-// Initialize Firebase
-const appli = initializeApp(firebaseConfig);
-const analytics = getAnalytics(appli);
-
 // parse JSON
 app.use(express.json());
 // parse URL encoded data

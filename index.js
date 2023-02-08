@@ -33,6 +33,7 @@ app.post("/create", cors(corsOptions), (req, res) => {
             res.send("KO");
         }
         console.log("ok");
+        console.log(content);
     });
     res.send("ok");
 });

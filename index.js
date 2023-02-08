@@ -27,13 +27,13 @@ app.post("/create", cors(corsOptions), (req, res) => {
     content = `${Date.now()} ---- ${JSON.stringify(
         req.body
     )}\r\n ------------------------- \r\n`;
+    console.log(content);
     fs.appendFile("selections.txt", content, (err) => {
         if (err) {
             console.error(err);
             res.send("KO");
         }
         console.log("ok");
-        console.log(content);
     });
     res.send("ok");
 });

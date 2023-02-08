@@ -20,6 +20,9 @@ app.use(cors());
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+app.get('/test', cors(corsOptions), (req, res) => {
+    res.send("ok welcome");
+});
 app.post("/create", cors(corsOptions), (req, res) => {
     content = `${Date.now()} ---- ${JSON.stringify(
         req.body
